@@ -72,14 +72,16 @@ template<typename T>
 T MaxElement(T* arr, int32_t size)
 {
     T maxElement{ arr[0] };
+    int32_t maxIndex{};
     for (int32_t i = 1; i < size; i++)
     {
         if (arr[i] > maxElement)
         {
             maxElement = arr[i];
+            maxIndex = i;
         }
     }
-    std::cout << "Your maximum element: " << maxElement << std::endl;
+    std::cout << "Your minimal element: " << maxElement << " (at index " << maxIndex << ")" << std::endl;
     return maxElement;
 }
 
@@ -87,16 +89,20 @@ template <typename T>
 T MinElement(T* arr, int32_t size)
 {
     T minElement{ arr[0] };
+    int32_t minIndex{};
+
     for (int32_t i = 1; i < size; i++)
     {
         if (arr[i] < minElement)
         {
-            minElement = arr[i];
+            minElement = arr[i]; 
+            minIndex = i;
         }
     }
-    std::cout << "Your minimal element: " << minElement << std::endl;
+    std::cout << "Your minimal element: " << minElement << " (at index " << minIndex << ")" << std::endl;
     return minElement;
 }
+
 
 
 #endif
