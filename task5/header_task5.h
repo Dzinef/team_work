@@ -1,4 +1,3 @@
-#pragma once
 #ifndef HEADER_H
 #define HEADER_H
 
@@ -12,7 +11,7 @@ template <typename T>
 void EnterTheArray(T* arr, int32_t size)
 {
     std::cout << "Enter the array elements\n";
-    for (int32_t i{}; i < size; i++)
+    for (int32_t i{}; i < size; ++i)
     {
         std::cin >> arr[i];
     }
@@ -24,12 +23,13 @@ template <typename T>
 void OutputTheArray(T* arr, int32_t size)
 {
     std::cout << "Array elements:\n";
-    for (int32_t i{}; i < size; i++)
+    for (int32_t i{}; i < size; ++i)
     {
         std::cout << arr[i] << ", ";
     }
     std::cout << "\n";
 }
+
 template<typename T>
 int32_t CountElements(T* arr, int32_t size)
 {
@@ -37,7 +37,7 @@ int32_t CountElements(T* arr, int32_t size)
     int32_t secondNull{ 0 };
     bool firstNullFound{ false };
     bool secondNullFound{ false };
-    for (int32_t i = 0; i < size; i++)
+    for (int32_t i = 0; i < size; ++i)
     {
         if (arr[i] == 0 || arr[i] == '0')
         {
@@ -47,7 +47,7 @@ int32_t CountElements(T* arr, int32_t size)
             break;
         }
     }
-    for (int32_t i = size - 1; i != 0; i--)
+    for (int32_t i = size - 1; i != 0; --i)
     {
         if (arr[i] == 0 || arr[i] == '0')
         {
@@ -68,12 +68,13 @@ int32_t CountElements(T* arr, int32_t size)
         return 0;
     }
 }
+
 template<typename T>
 T MaxElement(T* arr, int32_t size, int32_t& maxIndex)
 {
     T maxElement{ arr[0] };
     // объявлена глобальная инициализация min и max Index
-    for (int32_t i = 1; i < size; i++)
+    for (int32_t i = 1; i < size; ++i)
     {
         if (arr[i] > maxElement)
         {
@@ -90,7 +91,7 @@ T MinElement(T* arr, int32_t size, int32_t& minIndex)
 {
     T minElement{ arr[0] };
     // объявлена глобальная инициализация min и max Index
-    for (int32_t i = 1; i < size; i++)
+    for (int32_t i = 1; i < size; ++i)
     {
         if (arr[i] < minElement)
         {
@@ -101,6 +102,7 @@ T MinElement(T* arr, int32_t size, int32_t& minIndex)
     std::cout << "Your minimal element: " << minElement << " (at index " << minIndex << ")" << std::endl;
     return minElement;
 }
+
 template<typename T>
 double CalculatAverage(T* arr, int32_t size, int32_t& minIndex, int32_t& maxIndex)
 {
@@ -116,7 +118,7 @@ double CalculatAverage(T* arr, int32_t size, int32_t& minIndex, int32_t& maxInde
     for (int32_t i = minIndex + 1; i < maxIndex; ++i)
     {
         sumOfElements += arr[i];
-        count++;
+        ++count;
     }
     if (count > 0)
     {
