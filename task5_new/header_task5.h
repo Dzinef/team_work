@@ -72,7 +72,6 @@ template<typename T>
 T MaxElement(T* arr, int32_t size, int32_t& maxIndex)
 {
     T maxElement{ arr[0] };
-    // объ€влена глобальна€ инициализаци€ min и max Index
     for (int32_t i = 1; i < size; i++)
     {
         if (arr[i] > maxElement)
@@ -89,7 +88,6 @@ template <typename T>
 T MinElement(T* arr, int32_t size, int32_t& minIndex)
 {
     T minElement{ arr[0] };
-    // объ€влена глобальна€ инициализаци€ min и max Index
     for (int32_t i = 1; i < size; i++)
     {
         if (arr[i] < minElement)
