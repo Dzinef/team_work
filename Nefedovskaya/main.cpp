@@ -12,15 +12,15 @@ int32_t main()
     {
     case 0:
         EnterTheArray(arr_char, size);
-        OutputTheArray(arr_char, size);
+        PrintArray(arr_char, size);
         break;
     case 1:
         EnterTheArray(arr_int, size);
-        OutputTheArray(arr_int, size);
+        PrintArray(arr_int, size);
         break;
     case 2:
         EnterTheArray(arr_double, size);
-        OutputTheArray(arr_double, size);
+        PrintArray(arr_double, size);
         break;
     }
 }
