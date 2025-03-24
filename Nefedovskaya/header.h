@@ -19,7 +19,7 @@ void EnterTheArray(T* arr, int32_t size)
 }
 
 template <typename T>
-void OutputTheArray(T* arr, int32_t size)
+void PrintArray(T* arr, int32_t size)
 {
     std::cout << "Array elements:\n";
     for (int32_t i{}; i < size; ++i)
