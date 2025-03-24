@@ -12,7 +12,7 @@ template <typename T>
 void EnterTheArray(T* arr, int32_t size)
 {
     std::cout << "Enter the array elements\n";
-    for (int32_t i{}; i < size; i++)
+    for (int32_t i{}; i < size; ++i)
     {
         std::cin >> arr[i];
     }
@@ -24,7 +24,7 @@ template <typename T>
 void OutputTheArray(T* arr, int32_t size)
 {
     std::cout << "Array elements:\n";
-    for (int32_t i{}; i < size; i++)
+    for (int32_t i{}; i < size; ++i)
     {
         std::cout << arr[i] << ", ";
     }
@@ -47,7 +47,7 @@ int32_t CountElements(T* arr, int32_t size)
             break;
         }
     }
-    for (int32_t i = size - 1; i != 0; i--)
+    for (int32_t i = size - 1; i != 0; --i)
     {
         if (arr[i] == 0 || arr[i] == '0')
         {
@@ -73,7 +73,7 @@ T MaxElement(T* arr, int32_t size)
 {
     T maxElement{ arr[0] };
     int32_t maxIndex{};
-    for (int32_t i = 1; i < size; i++)
+    for (int32_t i = 1; i < size; ++i)
     {
         if (arr[i] > maxElement)
         {
@@ -91,7 +91,7 @@ T MinElement(T* arr, int32_t size)
     T minElement{ arr[0] };
     int32_t minIndex{};
 
-    for (int32_t i = 1; i < size; i++)
+    for (int32_t i = 1; i < size; ++i)
     {
         if (arr[i] < minElement)
         {
