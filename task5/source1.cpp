@@ -1,4 +1,4 @@
-#include "header_task3.h"
+#include "header_task4.h"
 
 
 void EnterSize(int32_t& size)
@@ -16,3 +16,4 @@ void EnterChoice(int32_t& choice)
     std::cout << "Enter choice number(0 or 1 or 2), what type of array do you want?:\n 0) Char;\n 1) Integer;\n 2) Double;\n";
     std::cin >> choice;
 }
+
